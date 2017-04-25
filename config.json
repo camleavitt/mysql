@@ -1,0 +1,16 @@
+{
+    "mysql": {
+        "host": "dokku-mysql-admin",
+        "database": "admin",
+        "user": "mysql",
+        "password": "476e1cc768050257"
+    },
+    "server": {
+        "port": 5000
+    },
+    "app": {
+        "layouts": true,
+        "themes": true,
+        "languages": true
+    }
+}

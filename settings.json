@@ -1,0 +1,673 @@
+{
+    "current_dept_emp": {
+        "slug": "current_dept_emp",
+        "table": {
+            "name": "current_dept_emp",
+            "pk": "",
+            "verbose": "current_dept_emp",
+            "view": true
+        },
+        "columns": [
+            {
+                "name": "emp_no",
+                "verbose": "emp_no",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "dept_no",
+                "verbose": "dept_no",
+                "control": {
+                    "text": true
+                },
+                "type": "char(4)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "from_date",
+                "verbose": "from_date",
+                "control": {
+                    "text": true
+                },
+                "type": "date",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "to_date",
+                "verbose": "to_date",
+                "control": {
+                    "text": true
+                },
+                "type": "date",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    },
+    "departments": {
+        "slug": "departments",
+        "table": {
+            "name": "departments",
+            "pk": "dept_no",
+            "verbose": "departments"
+        },
+        "columns": [
+            {
+                "name": "dept_no",
+                "verbose": "dept_no",
+                "control": {
+                    "text": true
+                },
+                "type": "char(4)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "dept_name",
+                "verbose": "dept_name",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(40)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    },
+    "dept_emp": {
+        "slug": "dept_emp",
+        "table": {
+            "name": "dept_emp",
+            "pk": [
+                "emp_no",
+                "dept_no"
+            ],
+            "verbose": "dept_emp"
+        },
+        "columns": [
+            {
+                "name": "emp_no",
+                "verbose": "emp_no",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "dept_no",
+                "verbose": "dept_no",
+                "control": {
+                    "text": true
+                },
+                "type": "char(4)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "from_date",
+                "verbose": "from_date",
+                "control": {
+                    "text": true
+                },
+                "type": "date",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "to_date",
+                "verbose": "to_date",
+                "control": {
+                    "text": true
+                },
+                "type": "date",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    },
+    "dept_emp_latest_date": {
+        "slug": "dept_emp_latest_date",
+        "table": {
+            "name": "dept_emp_latest_date",
+            "pk": "",
+            "verbose": "dept_emp_latest_date",
+            "view": true
+        },
+        "columns": [
+            {
+                "name": "emp_no",
+                "verbose": "emp_no",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "from_date",
+                "verbose": "from_date",
+                "control": {
+                    "text": true
+                },
+                "type": "date",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "to_date",
+                "verbose": "to_date",
+                "control": {
+                    "text": true
+                },
+                "type": "date",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    },
+    "dept_manager": {
+        "slug": "dept_manager",
+        "table": {
+            "name": "dept_manager",
+            "pk": [
+                "emp_no",
+                "dept_no"
+            ],
+            "verbose": "dept_manager"
+        },
+        "columns": [
+            {
+                "name": "emp_no",
+                "verbose": "emp_no",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "dept_no",
+                "verbose": "dept_no",
+                "control": {
+                    "text": true
+                },
+                "type": "char(4)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "from_date",
+                "verbose": "from_date",
+                "control": {
+                    "text": true
+                },
+                "type": "date",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "to_date",
+                "verbose": "to_date",
+                "control": {
+                    "text": true
+                },
+                "type": "date",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    },
+    "employees": {
+        "slug": "employees",
+        "table": {
+            "name": "employees",
+            "pk": "emp_no",
+            "verbose": "employees"
+        },
+        "columns": [
+            {
+                "name": "emp_no",
+                "verbose": "emp_no",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "birth_date",
+                "verbose": "birth_date",
+                "control": {
+                    "text": true
+                },
+                "type": "date",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "first_name",
+                "verbose": "first_name",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(14)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "last_name",
+                "verbose": "last_name",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(16)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "gender",
+                "verbose": "gender",
+                "control": {
+                    "text": true
+                },
+                "type": "enum('M','F')",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "hire_date",
+                "verbose": "hire_date",
+                "control": {
+                    "text": true
+                },
+                "type": "date",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    },
+    "salaries": {
+        "slug": "salaries",
+        "table": {
+            "name": "salaries",
+            "pk": [
+                "emp_no",
+                "from_date"
+            ],
+            "verbose": "salaries"
+        },
+        "columns": [
+            {
+                "name": "emp_no",
+                "verbose": "emp_no",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "salary",
+                "verbose": "salary",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "from_date",
+                "verbose": "from_date",
+                "control": {
+                    "text": true
+                },
+                "type": "date",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "to_date",
+                "verbose": "to_date",
+                "control": {
+                    "text": true
+                },
+                "type": "date",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    },
+    "titles": {
+        "slug": "titles",
+        "table": {
+            "name": "titles",
+            "pk": [
+                "emp_no",
+                "title",
+                "from_date"
+            ],
+            "verbose": "titles"
+        },
+        "columns": [
+            {
+                "name": "emp_no",
+                "verbose": "emp_no",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "title",
+                "verbose": "title",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(50)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "from_date",
+                "verbose": "from_date",
+                "control": {
+                    "text": true
+                },
+                "type": "date",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "to_date",
+                "verbose": "to_date",
+                "control": {
+                    "text": true
+                },
+                "type": "date",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    }
+}
